@@ -1,0 +1,108 @@
+.wraper {
+	width: 400px;
+	height: 400px;
+	background-color: lightblue;
+	position: relative;
+/*	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 0.5s;*/
+	-webkit-transition: all 0.5s linear 0.5s;
+	-o-transition: all 0.5s linear 0.5s;
+	transition: all 0.5s linear 0.5s;
+}
+.child-wraper {
+	width: 150px;
+	height: 150px;
+	background-color: yellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	-webkit-transition: all 0.5s ease 0.5s;
+	-o-transition: all 0.5s ease 0.5s;
+	transition: all 0.5s ease 0.5s;
+	-webkit-animation: myanimation 5s infinite;
+	        animation: myanimation 5s infinite;
+
+}
+.wraper:hover {
+	background-color: red;
+}
+/*.child-wraper:hover {
+	background-color: green;
+	transform: translate(-50%,-50%) rotate(45deg);	
+}*/
+/*.wraper:hover .child-wraper {
+	background-color: red;
+}*/
+
+
+/*Chat -icon animation*/
+.wraper-animation .chat-icon {
+	height: 80px;
+	-webkit-animation: wraperanimation 5s 2;
+	        animation: wraperanimation 5s 2;
+}
+.wraper-animation,
+.wraper-animation2 {
+	margin-top:50px;
+}
+.wraper-animation2 .chat-icon2 {
+	height: 80px;
+	-webkit-animation: wraperanimation-chat 5s infinite ;
+	        animation: wraperanimation-chat 5s infinite ;
+	position: relative;
+}
+
+.test::after {
+	content: '';
+	background: url('https://www.w3schools.com/css/smiley.gif');
+	width: 50px;
+	height: 33px;
+	display: inline-block;
+	background-repeat: no-repeat;
+}
+/*Keyframes*/
+@-webkit-keyframes myanimation {
+	0% {-webkit-transform: translate(-50%,-50%) rotate(0deg);transform: translate(-50%,-50%) rotate(0deg); background: grey;}
+	25% {-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg); background: black;}
+	50% {-webkit-transform: translate(-50%,-50%) rotate(360deg);transform: translate(-50%,-50%) rotate(360deg); background: green;}
+	75% {-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg); background: red;}
+	100% {-webkit-transform: translate(-50%,-50%) rotate(0deg);transform: translate(-50%,-50%) rotate(0deg); background: aqua;}
+}
+@keyframes myanimation {
+	0% {-webkit-transform: translate(-50%,-50%) rotate(0deg);transform: translate(-50%,-50%) rotate(0deg); background: grey;}
+	25% {-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg); background: black;}
+	50% {-webkit-transform: translate(-50%,-50%) rotate(360deg);transform: translate(-50%,-50%) rotate(360deg); background: green;}
+	75% {-webkit-transform: translate(-50%,-50%) rotate(45deg);transform: translate(-50%,-50%) rotate(45deg); background: red;}
+	100% {-webkit-transform: translate(-50%,-50%) rotate(0deg);transform: translate(-50%,-50%) rotate(0deg); background: aqua;}
+}
+
+@-webkit-keyframes wraperanimation {
+	0% {-webkit-transform: translateX(50px) rotate(45deg);transform: translateX(50px) rotate(45deg);}
+	25% {-webkit-transform: translateX(150px) rotate(90deg);transform: translateX(150px) rotate(90deg);}
+	50% {-webkit-transform: translateX(300px) rotate(360deg);transform: translateX(300px) rotate(360deg);}
+	100% {-webkit-transform: translateX(500px) rotate(45deg);transform: translateX(500px) rotate(45deg);}
+}
+
+@keyframes wraperanimation {
+	0% {-webkit-transform: translateX(50px) rotate(45deg);transform: translateX(50px) rotate(45deg);}
+	25% {-webkit-transform: translateX(150px) rotate(90deg);transform: translateX(150px) rotate(90deg);}
+	50% {-webkit-transform: translateX(300px) rotate(360deg);transform: translateX(300px) rotate(360deg);}
+	100% {-webkit-transform: translateX(500px) rotate(45deg);transform: translateX(500px) rotate(45deg);}
+}
+@-webkit-keyframes wraperanimation-chat {
+	0%  {left: 50px;}
+	25% {left: 150px;}
+	50% {left: 300px;}
+	100% {left: 500px;}
+}
+@keyframes wraperanimation-chat {
+	0%  {left: 50px;}
+	25% {left: 150px;}
+	50% {left: 300px;}
+	100% {left: 500px;}
+}
